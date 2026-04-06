@@ -27,7 +27,7 @@ export default function App() {
   /* =========================
      FONT CONFIG
      ========================= */
-  const [fontWeight, setFontWeight] = useState<"normal" | "bold">("bold");
+  const [fontWeight, setFontWeight] = useState<"normal" | "bold">("normal");
   const [fontSize, setFontSize] = useState(18);
   const [fontColor, setFontColor] = useState("#ffffff");
 
@@ -184,8 +184,8 @@ export default function App() {
             <div
               ref={captureRef}
               className={`relative bg-black w-full mx-auto overflow-hidden ${orientation === "portrait"
-                  ? "aspect-[3/4] max-w-[420px]"
-                  : "aspect-[4/3] max-w-[640px]"
+                ? "aspect-[3/4] max-w-[420px]"
+                : "aspect-[4/3] max-w-[640px]"
                 }`}
             >
               <img
@@ -260,8 +260,8 @@ export default function App() {
               <button
                 onClick={() => setOrientation("portrait")}
                 className={`px-4 py-2 rounded border ${orientation === "portrait"
-                    ? "bg-black text-white"
-                    : "bg-white"
+                  ? "bg-black text-white"
+                  : "bg-white"
                   }`}
               >
                 Portrait (3:4)
@@ -270,8 +270,8 @@ export default function App() {
               <button
                 onClick={() => setOrientation("landscape")}
                 className={`px-4 py-2 rounded border ${orientation === "landscape"
-                    ? "bg-black text-white"
-                    : "bg-white"
+                  ? "bg-black text-white"
+                  : "bg-white"
                   }`}
               >
                 Landscape (4:3)
@@ -297,6 +297,7 @@ export default function App() {
               type="datetime-local"
               value={dateTime}
               onChange={(e) => setDateTime(e.target.value)}
+              step="1"
               className="w-full border px-3 py-2 rounded"
             />
           </div>
@@ -375,7 +376,7 @@ export default function App() {
             <textarea
               rows={4}
               value={address}
-              readOnly
+              onChange={(e) => setAddress(e.target.value)}
               className="w-full border px-3 py-2 rounded bg-gray-100 text-sm"
             />
           </div>
