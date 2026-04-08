@@ -74,7 +74,7 @@ export default function PrintSPBU() {
 
       const leftText = (text: string) => text;
 
-      const bigCenterText = (text) => {
+      const bigCenterText = (text: string) => {
         return `\x1B\x21\x10${centerText(text)}\x1B\x21\x00`;
       };
 
