@@ -83,12 +83,14 @@ export default function PrintSPBU() {
       const rawText = `
 ${spacer(2)}
 ${bigCenterText('PERTAMINA "PASTI PAS"')}
+
+
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
 ${leftText('TELP. 0274-523871')}
-${leftText('\n')}
-${leftText('\n')}
-${leftText('\n')}
+
+
+
 ${formatLine(date, time)}
 ${leftText(`Receipt No. : ${form.receiptNo}`)}
 ${leftText('\n')}
