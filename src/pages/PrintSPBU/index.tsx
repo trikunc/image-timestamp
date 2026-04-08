@@ -77,6 +77,7 @@ export default function PrintSPBU() {
       const spacer = (lines = 1) => "\n".repeat(lines);
 
       const rawText = `
+${spacer(1)}
 ${centerText('PERTAMINA "PASTI PAS"')}
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
@@ -96,6 +97,7 @@ ${spacer(1)}
 ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
+${spacer(1)}
 `.trim();
 
       const encoded = encodeURIComponent(rawText);
