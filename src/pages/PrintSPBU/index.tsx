@@ -86,22 +86,25 @@ ${bigCenterText('PERTAMINA "PASTI PAS"')}
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
 ${leftText('TELP. 0274-523871')}
-${spacer(1)}
+${leftText('\n')}
+${leftText('\n')}
+${leftText('\n')}
 ${formatLine(date, time)}
 ${leftText(`Receipt No. : ${form.receiptNo}`)}
-${spacer(1)}
+${leftText('\n')}
+${leftText('\n')}
 ${formatLine("Pump No.", form.pumpNo)}
 ${formatLine("Grade", form.grade)}
 ${formatLine("Volume(L)", form.volume.toFixed(2))}
 ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
 ${formatLine("Amount", amount.toString())}
-${spacer(1)}
+${leftText('\n')}
 ${formatLine("Vehicle No.", form.vehicleNo)}
-${spacer(1)}
+${leftText('\n')}
 ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
-${spacer(2)}
+${spacer(3)}
 `.trim();
 
       const encoded = encodeURIComponent(rawText);
