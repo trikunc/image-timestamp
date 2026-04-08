@@ -74,25 +74,25 @@ export default function PrintSPBU() {
 
       const leftText = (text: string) => text; // biar konsisten
 
-      // const spacer = (lines = 1) => "\n".repeat(lines);
+      const spacer = (lines = 1) => "\n".repeat(lines);
 
       const rawText = `
 ${centerText('PERTAMINA "PASTI PAS"')}
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
 ${leftText('TELP. 0274-523871')}
-
+${spacer(1)}
 ${formatLine(date, time)}
 ${leftText(`Receipt No. : ${form.receiptNo}`)}
-
+${spacer(1)}
 ${formatLine("Pump No.", form.pumpNo)}
 ${formatLine("Grade", form.grade)}
 ${formatLine("Volume(L)", form.volume.toFixed(2))}
 ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
 ${formatLine("Amount", amount.toString())}
-
+${spacer(1)}
 ${formatLine("Vehicle No.", form.vehicleNo)}
-
+${spacer(1)}
 ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
