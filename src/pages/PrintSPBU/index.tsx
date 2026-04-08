@@ -72,34 +72,36 @@ export default function PrintSPBU() {
         return " ".repeat(pad > 0 ? pad : 0) + text;
       };
 
-      const leftText = (text: string) => text; // biar konsisten
+      const leftText = (text: string) => text;
 
-      // const spacer = (lines = 1) => "\n".repeat(lines);
+      const bigCenterText = (text) => {
+        return `\x1B\x21\x10${centerText(text)}\x1B\x21\x00`;
+      };
+
+      const spacer = (lines = 1) => "\n".repeat(lines);
 
       const rawText = `
-${leftText('\n')}
-\x1B\x21\x30
-${centerText('PERTAMINA "PASTI PAS"')}
-\x1B\x21\x00
+${spacer(2)}
+${bigCenterText('PERTAMINA "PASTI PAS"')}
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
 ${leftText('TELP. 0274-523871')}
-${leftText('\n')}
+${spacer(1)}
 ${formatLine(date, time)}
 ${leftText(`Receipt No. : ${form.receiptNo}`)}
-${leftText('\n')}
+${spacer(1)}
 ${formatLine("Pump No.", form.pumpNo)}
 ${formatLine("Grade", form.grade)}
 ${formatLine("Volume(L)", form.volume.toFixed(2))}
 ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
 ${formatLine("Amount", amount.toString())}
-${leftText('\n')}
+${spacer(1)}
 ${formatLine("Vehicle No.", form.vehicleNo)}
-${leftText('\n')}
+${spacer(1)}
 ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
-${leftText('\n')}
+${spacer(2)}
 `.trim();
 
       const encoded = encodeURIComponent(rawText);
