@@ -62,17 +62,17 @@ export default function PrintSPBU() {
     if (isAndroid()) {
       const WIDTH = 32;
 
-      const formatLine = (left, right) => {
+      const formatLine = (left: string, right: string) => {
         const space = WIDTH - left.length - right.length;
         return left + " ".repeat(space > 0 ? space : 1) + right;
       };
 
-      const centerText = (text) => {
+      const centerText = (text: string) => {
         const pad = Math.floor((WIDTH - text.length) / 2);
         return " ".repeat(pad > 0 ? pad : 0) + text;
       };
 
-      const leftText = (text) => text; // biar konsisten
+      const leftText = (text: string) => text; // biar konsisten
 
       const spacer = (lines = 1) => "\n".repeat(lines);
 
