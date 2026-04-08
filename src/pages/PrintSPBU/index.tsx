@@ -78,8 +78,43 @@ export default function PrintSPBU() {
         return `\x1B\x21\x10${centerText(text)}\x1B\x21\x00`;
       };
 
+      //       const rawText = `
+      // ${leftText(' ')}
+      // ${leftText(' ')}
+      // ${bigCenterText('PERTAMINA "PASTI PAS"')}
+      // ${leftText(' ')}
+      // ${leftText('SPBU 44.552.11')}
+      // ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
+      // ${leftText('TELP. 0274-523871')}
+      // ${leftText(' ')}
+      // ${formatLine(date, time)}
+      // ${leftText(`Receipt No.:${form.receiptNo}`)}
+      // ${leftText(' ')}
+      // ${formatLine("Pump No.", form.pumpNo)}
+      // ${formatLine("Grade", form.grade)}
+      // ${formatLine("Volume(L)", form.volume.toFixed(2))}
+      // ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
+      // \x1B\x45\x01
+      // ${formatLine("Amount(Rp.)", amount.toString())}
+      // \x1B\x45\x00
+      // ${leftText(' ')}
+      // ${formatLine("Vehicle No.", form.vehicleNo)}
+      // ${leftText(' ')}
+      // ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
+      // ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
+      // ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
+      // ${leftText(' ')}
+      // ${leftText(' ')}
+      // ${leftText(' ')}
+      // ${leftText(' ')}
+      // ${leftText(' ')}
+      // ${leftText(' ')}
+      // `.trim();
+
+
       const rawText = `
-${leftText(' ')}
+\x1B\x4D\x01
+
 ${leftText(' ')}
 ${leftText(' ')}
 ${bigCenterText('PERTAMINA "PASTI PAS"')}
@@ -89,21 +124,25 @@ ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
 ${leftText('TELP. 0274-523871')}
 ${leftText(' ')}
 ${formatLine(date, time)}
-${leftText(`Receipt No. : ${form.receiptNo}`)}
+${leftText(`Receipt No.:${form.receiptNo}`)}
 ${leftText(' ')}
 ${formatLine("Pump No.", form.pumpNo)}
 ${formatLine("Grade", form.grade)}
 ${formatLine("Volume(L)", form.volume.toFixed(2))}
 ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
+
 \x1B\x45\x01
-${formatLine("Amount", amount.toString())}
+${formatLine("Amount(Rp.)", amount.toString())}
 \x1B\x45\x00
+
 ${leftText(' ')}
 ${formatLine("Vehicle No.", form.vehicleNo)}
 ${leftText(' ')}
 ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
+${leftText(' ')}
+${leftText(' ')}
 ${leftText(' ')}
 ${leftText(' ')}
 ${leftText(' ')}
