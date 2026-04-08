@@ -84,16 +84,15 @@ export default function PrintSPBU() {
 ${spacer(2)}
 ${bigCenterText('PERTAMINA "PASTI PAS"')}
 
-
+${leftText('.')}
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
+\x1B\x33\x10
 ${leftText('TELP. 0274-523871')}
-
-
-
+${leftText('')}
 ${formatLine(date, time)}
+\x1B\x32
 ${leftText(`Receipt No. : ${form.receiptNo}`)}
-${leftText('\n')}
 ${leftText('\n')}
 ${formatLine("Pump No.", form.pumpNo)}
 ${formatLine("Grade", form.grade)}
