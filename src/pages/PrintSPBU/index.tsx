@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import KyaiMojo from "../../components/SPBU/KyaiMojo";
 import Kentungan from "../../components/SPBU/Kentungan";
 import Jamang from "../../components/SPBU/Jamang";
