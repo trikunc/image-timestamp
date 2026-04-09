@@ -57,56 +57,23 @@ export default function Kentungan() {
 
     // ✅ ANDROID (RAWBT)
     if (isAndroid()) {
-      const WIDTH = 32;
+      // const WIDTH = 32;
 
-      const formatLine = (left: string, right: string) => {
-        const space = WIDTH - left.length - right.length;
-        return left + " ".repeat(space > 0 ? space : 1) + right;
-      };
+      // const formatLine = (left: string, right: string) => {
+      //   const space = WIDTH - left.length - right.length;
+      //   return left + " ".repeat(space > 0 ? space : 1) + right;
+      // };
 
-      const centerText = (text: string) => {
-        const pad = Math.floor((WIDTH - text.length) / 2);
-        return " ".repeat(pad > 0 ? pad : 0) + text;
-      };
+      // const centerText = (text: string) => {
+      //   const pad = Math.floor((WIDTH - text.length) / 2);
+      //   return " ".repeat(pad > 0 ? pad : 0) + text;
+      // };
 
-      const leftText = (text: string) => text;
+      // const leftText = (text: string) => text;
 
       // const bigCenterText = (text: string) => {
       //   return `\x1B\x21\x10${centerText(text)}\x1B\x21\x00`;
       // };
-
-      //       const rawText = `
-      // ${leftText(' ')}
-      // ${leftText(' ')}
-      // ${bigCenterText('PERTAMINA "PASTI PAS"')}
-      // ${leftText(' ')}
-      // ${leftText('SPBU 44.552.11')}
-      // ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
-      // ${leftText('TELP. 0274-523871')}
-      // ${leftText(' ')}
-      // ${formatLine(date, time)}
-      // ${leftText(`Receipt No.:${form.receiptNo}`)}
-      // ${leftText(' ')}
-      // ${formatLine("Pump No.", form.pumpNo)}
-      // ${formatLine("Grade", form.grade)}
-      // ${formatLine("Volume(L)", form.volume.toFixed(2))}
-      // ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
-      // \x1B\x45\x01
-      // ${formatLine("Amount(Rp.)", amount.toString())}
-      // \x1B\x45\x00
-      // ${leftText(' ')}
-      // ${formatLine("Vehicle No.", form.vehicleNo)}
-      // ${leftText(' ')}
-      // ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
-      // ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
-      // ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
-      // ${leftText(' ')}
-      // ${leftText(' ')}
-      // ${leftText(' ')}
-      // ${leftText(' ')}
-      // ${leftText(' ')}
-      // ${leftText(' ')}
-      // `.trim();
 
 
       const rawText = `
