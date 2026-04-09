@@ -124,17 +124,16 @@ ${formatLine("Pump No.", form.pumpNo)}
 ${formatLine("Grade", form.grade)}
 ${formatLine("Volume(L)", form.volume.toFixed(2))}
 ${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
-
 \x1B\x45\x01
 ${formatLine("Amount(Rp.)", form.total.toString())}
 \x1B\x45\x00
-
 ${leftText(' ')}
 ${formatLine("Vehicle No.", form.vehicleNo)}
 ${leftText(' ')}
 ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
+${leftText(' ')}
 ${leftText(' ')}
 ${leftText(' ')}
 ${leftText(' ')}
