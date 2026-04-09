@@ -71,9 +71,9 @@ export default function Kentungan() {
 
       const leftText = (text: string) => text;
 
-      const bigCenterText = (text: string) => {
-        return `\x1B\x21\x10${centerText(text)}\x1B\x21\x00`;
-      };
+      // const bigCenterText = (text: string) => {
+      //   return `\x1B\x21\x10${centerText(text)}\x1B\x21\x00`;
+      // };
 
       //       const rawText = `
       // ${leftText(' ')}
@@ -110,8 +110,7 @@ export default function Kentungan() {
 
 
       const rawText = `
-      <font size='30'>${centerText('PERTAMINA "PASTI PAS"')}</font>
-${bigCenterText('PERTAMINA "PASTI PAS"')}
+${centerText('PERTAMINA "PASTI PAS"')}
 ${leftText(' ')}
 ${leftText('SPBU 44.552.11')}
 ${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
