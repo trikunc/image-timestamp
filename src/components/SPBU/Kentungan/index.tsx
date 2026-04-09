@@ -110,30 +110,16 @@ export default function Kentungan() {
 
 
       const rawText = `
-${centerText('PERTAMINA "PASTI PAS"')}
-${leftText(' ')}
-${leftText('SPBU 44.552.11')}
-${leftText('JL. KYAI MOJO 52 YOGYAKARTA')}
-${leftText('TELP. 0274-523871')}
-${leftText(' ')}
-${formatLine(date, time)}
-${leftText(`Receipt No.:${form.receiptNo}`)}
-${leftText(' ')}
-${formatLine("Pump No.", form.pumpNo)}
-${formatLine("Grade", form.grade)}
-${formatLine("Volume(L)", form.volume.toFixed(2))}
-${formatLine("Unit Price(Rp./L)", unitPrice.toString())}
-\x1B\x45\x01
-${formatLine("Amount(Rp.)", form.total.toString())}
-\x1B\x45\x00
-${leftText(' ')}
-${formatLine("Vehicle No.", form.vehicleNo)}
-${leftText(' ')}
-${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
-${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
-${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
-${leftText(' ')}
-${leftText('.')}
+<center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pertamina_Logo.svg/512px-Pertamina_Logo.svg.png" width="120"/>
+</center>
+
+<center><font size='32'>PERTAMINA "PASTI PAS"</font></center>
+
+SPBU 44.552.11
+JL. KYAI MOJO 52 YOGYAKARTA
+TELP. 0274-523871
+...
 `.trim();
 
       const encoded = encodeURIComponent(rawText);
