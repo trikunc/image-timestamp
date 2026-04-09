@@ -111,9 +111,6 @@ export default function KyaiMojo() {
 
       const rawText = `
 \x1B\x4D\x01
-
-${leftText(' ')}
-${leftText(' ')}
 ${bigCenterText('PERTAMINA "PASTI PAS"')}
 ${leftText(' ')}
 ${leftText('SPBU 44.552.11')}
