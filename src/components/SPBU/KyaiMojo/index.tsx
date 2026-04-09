@@ -139,7 +139,7 @@ ${leftText(' ')}
 ${leftText(' ')}
 ${leftText(' ')}
 ${leftText(' ')}
-${leftText(' ')}
+${leftText('.')}
 `.trim();
 
       const encoded = encodeURIComponent(rawText);
