@@ -134,11 +134,6 @@ ${leftText('PREMIUM UNTUK GOLTIDAK MAMPU')}
 ${leftText('MARI GUNAKAN BBM NON SUBSIDI')}
 ${leftText('TERIMA KASIH DAN SELAMAT JALAN')}
 ${leftText(' ')}
-${leftText(' ')}
-${leftText(' ')}
-${leftText(' ')}
-${leftText(' ')}
-${leftText(' ')}
 ${leftText('.')}
 `.trim();
 
