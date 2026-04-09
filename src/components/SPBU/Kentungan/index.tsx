@@ -77,20 +77,64 @@ export default function Kentungan() {
 
 
       const rawText = `
-<center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pertamina_Logo.svg/512px-Pertamina_Logo.svg.png" width="120"/>
-</center>
+<div style="text-align:center;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Pertamina_Logo.svg/512px-Pertamina_Logo.svg.png" width="120"/>
+</div>
 
-<center><font size='32'>PERTAMINA "PASTI PAS"</font></center>
+<div style="text-align:center; font-size:20px; font-weight:bold;">
+  PERTAMINA "PASTI PAS"
+</div>
 
-SPBU 44.552.11
-JL. KYAI MOJO 52 YOGYAKARTA
-TELP. 0274-523871
-...
+<div>SPBU 44.552.11</div>
+<div>JL. KYAI MOJO 52 YOGYAKARTA</div>
+<div>TELP. 0274-523871</div>
+
+<br/>
+
+<div style="display:flex; justify-content:space-between;">
+  <span>${date}</span>
+  <span>${time}</span>
+</div>
+
+<div>Receipt No.: ${form.receiptNo}</div>
+
+<br/>
+
+<div style="display:flex; justify-content:space-between;">
+  <span>Pump No.</span><span>${form.pumpNo}</span>
+</div>
+
+<div style="display:flex; justify-content:space-between;">
+  <span>Grade</span><span>${form.grade}</span>
+</div>
+
+<div style="display:flex; justify-content:space-between;">
+  <span>Volume(L)</span><span>${form.volume.toFixed(2)}</span>
+</div>
+
+<div style="display:flex; justify-content:space-between;">
+  <span>Unit Price</span><span>${unitPrice}</span>
+</div>
+
+<div style="display:flex; justify-content:space-between; font-weight:bold;">
+  <span>Amount</span><span>${form.total}</span>
+</div>
+
+<br/>
+
+<div style="display:flex; justify-content:space-between;">
+  <span>Vehicle No.</span><span>${form.vehicleNo}</span>
+</div>
+
+<br/>
+
+<div>PREMIUM UNTUK GOLTIDAK MAMPU</div>
+<div>MARI GUNAKAN BBM NON SUBSIDI</div>
+<div>TERIMA KASIH DAN SELAMAT JALAN</div>
 `.trim();
 
       const encoded = encodeURIComponent(rawText);
-      window.location.href = `rawbt:${encoded}`;
+      window.location.href = `rawbt:html,${encoded}`;
       return;
     }
 
